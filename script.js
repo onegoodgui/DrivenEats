@@ -5,6 +5,8 @@ function SelecionarItem(botao){
     let comidaSelecionada = document.querySelector(".comida.selecionado");
     let bebidaSelecionada = document.querySelector(".bebida.selecionado");
     let sobremesaSelecionada = document.querySelector(".sobremesa.selecionado");
+    let nome = "";
+    let endereco = "";
     const itemSelo = document.querySelector(".selo");
     const selo = botao.querySelector("ion-icon");
     const Pedido = document.querySelector("footer button");
@@ -47,10 +49,10 @@ function SelecionarItem(botao){
             selo.classList.toggle("selo");
         }
 
-        console.log(comidaSelecionada);
-        console.log(bebidaSelecionada);
-        console.log(sobremesaSelecionada);
-        console.log(Pedido);
+        // console.log(comidaSelecionada);
+        // console.log(bebidaSelecionada);
+        // console.log(sobremesaSelecionada);
+        // console.log(Pedido);
 
         comidaSelecionada = document.querySelector(".comida.selecionado");
         bebidaSelecionada = document.querySelector(".bebida.selecionado");
@@ -73,5 +75,37 @@ function SelecionarItem(botao){
         }
 }
 
+let mensagem = "Olá, gostaria de fazer o pedido: \n- Prato: Frango Yin Yang\n- Bebida: Coquinha Gelada\n- Sobremesa: Pudim\nTotal: R$ ";
+ let num = 27.70;
+ let n = num.toFixed(2);
+ mensagem = mensagem + n;
+ console.log(mensagem);
+ let res = "";
+ console.log(res);
 
+ function confirmarPedido(botao){
 
+    let modal = document.querySelector(".modal");
+    console.log(modal);
+     console.log(botao);
+     if(botao.innerHTML === "Fechar Pedido"){
+        nome = prompt("Qual seu nome?");
+        endereco = prompt("Qual seu endereço?");
+        mensagem = mensagem +"\n Nome: " + nome + "\n Endereço: " + endereco;
+        res = encodeURIComponent(mensagem);
+        modal.classList.remove("escondido");
+     }
+     
+ }
+
+ function cancelar(){
+     let modal = document.querySelector(".modal");
+     console.log(modal);
+     modal.classList.add("escondido");
+ }
+
+ 
+
+ function confirmar(){
+     location.href = "https://wa.me/?text=" + res;
+ }

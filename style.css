@@ -27,7 +27,7 @@ header{
     margin-bottom: 30px;
     position: fixed;
     top: 0;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 
@@ -191,6 +191,105 @@ button ion-icon{
 
 .menu-scroll .height_197{
     height: 197px;
+}
+
+body .modal{
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .escondido{
+    display: none;
+}
+
+.confirmar-pedido{
+    background-color: #50D074;
+    color: #FFF;
+    width: 375px;
+    height: 350px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.confirmar-pedido strong{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 28px;
+}
+
+.confirmar-pedido p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+
+.confirmar-pedido .lista{
+    /* background-color: lightskyblue; */
+    height: 160px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.lista .item, .lista .total{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.total strong{
+    margin: 0;
+    /* height: fit-content; */
+}
+.confirmar-pedido button.confirmar{
+    background-color: #FFF;
+    width: 100%;
+    height: 52px;
+    margin-top: 24px;
+    border-radius: 26px;
+    border-style: hidden;
+    text-align: center;
+}
+
+.confirmar-pedido button.cancelar{
+    background-color: transparent;
+    width: 100%;
+    height: 52px;
+    border-radius: 26px;
+    border-style: hidden;
+    text-align: center;
+}
+
+.confirmar-pedido button.confirmar p{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    color: #50D074;
+}
+
+.confirmar-pedido button.cancelar p{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    color: #FFF;
 }
 
 body footer{
