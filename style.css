@@ -92,7 +92,7 @@ border-style: none;
 }
 
 .menu-scroll .opcoes button:hover{
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
 }
 
 .menu-scroll .opcoes::-webkit-scrollbar{
